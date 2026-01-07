@@ -15,7 +15,7 @@
 本地代码仓的小型项目的自动化训练数据生成系统 
 
 ## 🌲 目录结构
-
+```
 RepoGen
   └── agent
         ├── llm # 包含主流LLM接口类
@@ -48,7 +48,7 @@ RepoGen
   └── run_ast_parser.py # 生成dependency_graph.json
   └── run_repo_tree.py # 生成 repo_tree.json
   └── main.py # task agents pipeline 入口
-
+```
 
 ## 🛠 核心工作流
 
