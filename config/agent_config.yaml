@@ -1,0 +1,33 @@
+# LLM configuration for all agents
+llm:
+  type: "huggingface"
+  model: "my-model"
+  api_base: "http://127.0.0.1:8000/v1"  # Local API endpoint
+  api_key: "EMPTY"  # Can be empty for local models
+  device: "cuda"  # Options: cuda, cpu
+  torch_dtype: "float16"
+  temperature: 0.6
+  max_input_tokens: 110000   # 留出约 18K 的余量给输出和 Buffer
+  max_output_tokens: 8192    # 提升输出上限，应对长代码或复杂推理
+
+
+# Rate limit settings for different LLM providers
+rate_limits:
+  # OpenAI rate limits
+  openai:
+    requests_per_minute: 500
+    input_tokens_per_minute: 200000
+    output_tokens_per_minute: 100000
+    input_token_price_per_million: 0.15
+    output_token_price_per_million: 0.60
+
+# Flow control parameters
+flow_control:
+  max_reader_search_attempts: 1  # Maximum times reader can call searcher
+  status_sleep_time: 1           # Time to sleep between status updates (seconds)
+
+task: "qa" # Options: "qa" or "design"
+ 
+settings:
+  test_mode: "none"  # Options: 'context_print', 'none'
+  order_mode: "topo" # Options: 'topo', 'random_node', 'random_file'

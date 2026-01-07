@@ -1,0 +1,8 @@
+[
+  "The system follows a clean architecture pattern with a central root module orchestrating core business flows (vending machine operations) and depending on isolated, domain-specific modules: payment, inventory, and models.",
+  "The models module is a foundational domain entity hub—highly depended upon by both root and inventory—serving as the single source of truth for product data (Item class), ensuring consistency across inventory and payment workflows.",
+  "The payment module is a terminal consumer with no outbound dependencies, indicating it is a leaf service that responds to triggers from the root module, enforcing financial integrity during transactions without influencing other domains.",
+  "The inventory module depends on models to validate and manage product state (e.g., expiry), but also has outbound dependencies to models and root, suggesting it acts as a bridge between product data and operational workflows, possibly triggering payment or root-level actions on stock changes.",
+  "Dependency direction reveals a unidirectional flow: root → payment and root → inventory → models, with models as the most consumed module—indicating that business logic is centralized in root, while domain entities (models) are shared but not allowed to initiate behavior, preserving separation of concerns.",
+  "The architecture enforces bounded contexts: payment handles financial state, inventory handles stock state, and models define shared data contracts—ensuring that changes in one domain (e.g., expiry rules) propagate via models without tight coupling to implementation details in payment or inventory."
+]

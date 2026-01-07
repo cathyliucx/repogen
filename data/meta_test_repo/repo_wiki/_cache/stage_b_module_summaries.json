@@ -1,0 +1,83 @@
+{
+  "(root)": {
+    "module": "(root)",
+    "module_summary": "An automated retail system that manages vending machine operations including product inventory, secure payment processing, transaction workflows (purchase, cancellation, fund addition), and expiry rule enforcement to ensure financial accuracy and operational integrity.",
+    "responsibilities": [
+      "Manage product inventory",
+      "Process secure payments",
+      "Handle transaction workflows (purchase, cancellation, fund addition)",
+      "Enforce product expiry rules",
+      "Ensure financial precision in self-service retail operations"
+    ],
+    "key_terms": [
+      "automated retail",
+      "vending machine",
+      "inventory management",
+      "secure payment processing",
+      "transaction workflow",
+      "expiry rules",
+      "financial precision"
+    ]
+  },
+  "inventory": {
+    "module": "inventory",
+    "module_summary": "The inventory module implements a core inventory management system for an automated retail vending machine, responsible for tracking, storing, retrieving, and removing expired products to maintain accurate and sellable stock.",
+    "responsibilities": [
+      "Track product quantities and locations in the vending machine",
+      "Store inventory data reliably",
+      "Retrieve products upon purchase requests",
+      "Identify and remove expired items to ensure sellable stock integrity",
+      "Maintain financial accuracy by aligning inventory with sales"
+    ],
+    "key_terms": [
+      "inventory tracking",
+      "stock management",
+      "product retrieval",
+      "expiration handling",
+      "automated retail",
+      "vending machine"
+    ]
+  },
+  "models": {
+    "module": "models",
+    "module_summary": "The models module contains the core product entity (Item) for an automated retail system, responsible for managing vendable items with integrity checks for inventory and expiry.",
+    "responsibilities": [
+      "Define the core Product (Item) entity",
+      "Enforce stock availability checks before sales",
+      "Validate product expiry conditions",
+      "Safely reduce item quantities during transactions"
+    ],
+    "key_terms": [
+      "Item",
+      "inventory integrity",
+      "expiry checks",
+      "stock availability",
+      "quantity reduction",
+      "vendable items"
+    ]
+  },
+  "payment": {
+    "module": "payment",
+    "module_summary": "The payment module implements a comprehensive payment processing system for automated retail environments like vending machines, managing the full lifecycle of transactions including initiation, validation, completion, and reversal, while ensuring financial and inventory alignment.",
+    "responsibilities": [
+      "Manage full transaction lifecycle (initiation, validation, completion, reversal)",
+      "Track transaction states using TxStatus and Tx classes",
+      "Handle various payment methods (e.g., Cash)",
+      "Ensure data integrity and secure cash handling",
+      "Reconcile financial records with inventory status",
+      "Process and reverse transactions and product additions"
+    ],
+    "key_terms": [
+      "payment_processor",
+      "transaction lifecycle",
+      "TxStatus",
+      "Tx",
+      "Handler",
+      "Cash",
+      "financial reconciliation",
+      "inventory alignment",
+      "automated retail",
+      "secure cash handling"
+    ]
+  }
+}

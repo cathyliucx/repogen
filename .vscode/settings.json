@@ -1,0 +1,6 @@
+{
+    // 让编辑器知道去哪里找你的自定义代码
+    "python.analysis.extraPaths": ["./src"],
+    // 终端启动时自动进入项目根目录
+    "terminal.integrated.cwd": "${workspaceFolder}"
+}

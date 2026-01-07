@@ -1,0 +1,23 @@
+GITHUB_TOKEN: ""
+
+output_directory: "downloaded_repos"
+max_repos: 1
+skip_archived: true
+skip_forks: true
+# 建议先设 0，避免因为 Python 占比过滤掉
+min_python_percentage: 0
+use_agent: true  # 是否启用 Filter Agent 来筛选仓库
+
+search_criteria:
+  owners: "xbpeng"
+  language: "Python"
+
+  # 可选：用 created 时间窗口缩小范围（如果你知道 MimicKit 的创建时间）
+  dates:
+    created_after: "2025-12-01"
+    created_before: "2021-01-01"
+
+  # sort/order 会影响“owner 下哪个仓库排第一”
+  sort: "stars"
+  order: "desc"
+  

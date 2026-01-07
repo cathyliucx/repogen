@@ -1,0 +1,105 @@
+{
+  "vending_machine.py": {
+    "file": "vending_machine.py",
+    "file_summary": "The vending_machine.py file implements an automated retail system that manages product inventory, processes secure payments, and handles transaction workflows including purchase, cancellation, and fund addition. It ensures financial precision and enforces product expiry rules to maintain integrity in self-service retail operations.",
+    "key_terms": [
+      "inventory management",
+      "payment processing",
+      "product expiry enforcement",
+      "transaction integrity",
+      "self-service retail",
+      "financial precision",
+      "system error handling"
+    ],
+    "workflows": [
+      "Customer adds money to ongoing transaction via add_money()",
+      "System lists available non-expired products via ls()",
+      "Customer selects product via pick() or buy(), validating availability and expiry, processing payment, and updating inventory",
+      "Transaction is canceled via cancel(), reverting inventory and payment states",
+      "System initializes with inventory and payment controls via __init__()",
+      "System errors are captured and handled via SysErr class to maintain robust operation"
+    ]
+  },
+  "inventory/inventory_manager.py": {
+    "file": "inventory/inventory_manager.py",
+    "file_summary": "The inventory_manager.py file implements a core inventory management system for an automated retail vending machine, ensuring products are tracked, stored, retrieved, and expired items are removed to maintain sellable stock and financial accuracy.",
+    "key_terms": [
+      "inventory slot",
+      "expiry enforcement",
+      "product retrieval",
+      "stock availability",
+      "vending machine",
+      "financial integrity",
+      "product placement"
+    ],
+    "workflows": [
+      "Add product to inventory slot via put() after verifying freshness and slot availability",
+      "Locate available products using find() by filtering out expired items",
+      "List all sellable products via ls() to present to customers",
+      "Retrieve product via get() only if available and not expired",
+      "Remove expired products from inventory via rm() to maintain stock quality",
+      "Initialize and coordinate inventory state and transactions via Store class constructor"
+    ]
+  },
+  "example.py": {
+    "file": "example.py",
+    "file_summary": "The vending machine system automates customer purchases by coordinating product selection, payment processing, and inventory updates while enforcing expiry rules and accurate financial calculations.",
+    "key_terms": [
+      "vending machine",
+      "product selection",
+      "payment processing",
+      "inventory updates",
+      "expiry rules",
+      "financial calculations"
+    ],
+    "workflows": [
+      "Customer selects product",
+      "System validates payment",
+      "System checks product expiry",
+      "System updates inventory",
+      "System dispenses product and confirms transaction"
+    ]
+  },
+  "models/product.py": {
+    "file": "models/product.py",
+    "file_summary": "The product.py module defines the core product entity (Item) and supporting functions for managing vendable items in an automated retail system. It ensures inventory integrity and product validity by enforcing stock availability and expiry checks before sales, and safely managing quantity reductions during transactions.",
+    "key_terms": [
+      "Item",
+      "inventory management",
+      "expiry check",
+      "stock availability",
+      "vending machine",
+      "quantity reduction"
+    ],
+    "workflows": [
+      "Validate product eligibility for sale using check() function",
+      "Safely reduce inventory quantity using mod() function during sales",
+      "Track and manage product lifecycle via Item class attributes (name, price, quantity, expiry, category)"
+    ]
+  },
+  "payment/payment_processor.py": {
+    "file": "payment/payment_processor.py",
+    "file_summary": "The payment_processor.py file implements a comprehensive payment processing system for automated retail environments, such as vending machines. It manages the full lifecycle of payment transactions—including initiation, validation, completion, and reversal—while ensuring alignment between financial records and inventory status. Core components include classes for transaction state tracking (TxStatus, Tx), payment handlers (Handler, Cash), and methods to process, reverse, and add transactions or products. The system enforces data integrity, secure cash handling, and accurate reconciliation to support reliable automated retail operations.",
+    "key_terms": [
+      "payment processing",
+      "transaction lifecycle",
+      "inventory alignment",
+      "financial reconciliation",
+      "refund reversal",
+      "cash handling",
+      "state validation",
+      "automated retail",
+      "vending machine",
+      "transaction status"
+    ],
+    "workflows": [
+      "Initialize payment processor and validate transaction context",
+      "Accept payment via cash or other methods (Cash class)",
+      "Validate payment amount and transaction state (TxStatus, Tx)",
+      "Execute payment and dispense product (proc method)",
+      "Reverse completed transaction and restore inventory (rev method)",
+      "Add new product to inventory with attribute validation (add method)",
+      "End-to-end transaction tracking and financial record keeping (Handler class)"
+    ]
+  }
+}

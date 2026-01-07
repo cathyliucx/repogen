@@ -1,0 +1,13 @@
+{
+    "version": "1.0.0",
+    "configurations": [
+        {
+            "name": "repogen",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "cwd": "${workspaceFolder}", // 核心：确保运行时的根路径一致
+            "console": "integratedTerminal"
+        }
+    ]
+}

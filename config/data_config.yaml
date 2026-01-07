@@ -1,0 +1,13 @@
+repo_dir: "data/raw_test_repo"
+out_dir: "data/meta_test_repo"
+
+repo_tree_dir: "data/meta_test_repo/repo_tree.json"
+repo_dependency_dir: "data/meta_test_repo/dependency_graph.json"
+repo_docstrings_dir: "data/meta_test_repo/dependency_graph.json"
+repo_readme_dir: "data/raw_test_repo/README.md"
+
+wiki_dir: "data/meta_test_repo/repo_wiki"
+
+rag_dir: "data/meta_test_repo/repo_wiki/WIKI.md"
+qa_out_dir: "output/qa_datasets.jsonl"
+design_out_dir: "output/design_datasets.jsonl"

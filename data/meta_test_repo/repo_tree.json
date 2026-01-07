@@ -1,0 +1,74 @@
+{
+  "type": "directory",
+  "name": "raw_test_repo",
+  "contents": [
+    {
+      "type": "file",
+      "name": "README.md",
+      "extension": "md"
+    },
+    {
+      "type": "file",
+      "name": "__init__.py",
+      "extension": "py"
+    },
+    {
+      "type": "file",
+      "name": "example.py",
+      "extension": "py"
+    },
+    {
+      "type": "directory",
+      "name": "inventory",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "extension": "py"
+        },
+        {
+          "type": "file",
+          "name": "inventory_manager.py",
+          "extension": "py"
+        }
+      ]
+    },
+    {
+      "type": "directory",
+      "name": "models",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "extension": "py"
+        },
+        {
+          "type": "file",
+          "name": "product.py",
+          "extension": "py"
+        }
+      ]
+    },
+    {
+      "type": "directory",
+      "name": "payment",
+      "contents": [
+        {
+          "type": "file",
+          "name": "__init__.py",
+          "extension": "py"
+        },
+        {
+          "type": "file",
+          "name": "payment_processor.py",
+          "extension": "py"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "vending_machine.py",
+      "extension": "py"
+    }
+  ]
+}
