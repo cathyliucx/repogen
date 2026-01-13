@@ -97,7 +97,7 @@ python main.py
 
 1. Agent相关参数请参考Config/agent_config.yaml
 2. Data路径相关参数请参考Config/data_config.yaml
-3. 下载Github代码仓相关参数请参考download_repo_config.yaml
+3. 下载Github代码仓相关参数请参考Cofig/download_repo_config.yaml
 
 ## 📊 数据示例
 
